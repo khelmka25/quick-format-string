@@ -10,9 +10,5 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 # Catch2
 add_subdirectory(${CMAKE_SOURCE_DIR}/deps/Catch2)
 
-option(RUN_TESTS OFF)
-
-if (RUN_TESTS)
-    enable_testing()
-    add_subdirectory(${CMAKE_SOURCE_DIR}/tests)
-endif(RUN_TESTS)
+enable_testing()
+add_subdirectory(${CMAKE_SOURCE_DIR}/tests)
