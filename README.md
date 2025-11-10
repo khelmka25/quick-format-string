@@ -1,1 +1,1 @@
-# quick-string-format
+# quick-format-string
