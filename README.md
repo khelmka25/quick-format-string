@@ -55,3 +55,15 @@ std::cout
   << std::endl;
 ```
 
+### Building
+Use the following set of commands to clone the repo then build and test the source code.
+```bash
+git clone <quick-format-string>
+cd quick-format-string
+git submodule update --init --recursive
+mkdir build
+cd build
+cmake ..
+make
+ctest
+```
