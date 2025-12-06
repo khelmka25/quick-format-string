@@ -43,6 +43,10 @@ public:
         return (N - 1ull);
     }
 
+    static constexpr std::size_t max_size() noexcept {
+        return N;
+    }
+
     void clear() {
         auto ptr = buffer;
         // set all chars to zero in do while loop
@@ -73,6 +77,11 @@ public:
     }
 
     const char_t* c_str() const noexcept { return buffer; }
+
+    template <typename... Ti>
+    static std::string create(const char_t* fmt, Ti&&... ti) {
+        return QFString().format(fmt, std::forward<Ti>(ti)...).string();
+    }
 
     template <typename... Ti>
     void format(const char_t* fmt, Ti&&... ti) & noexcept {
